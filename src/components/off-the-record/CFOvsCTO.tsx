@@ -1,0 +1,166 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Scale } from "lucide-react";
+
+const COMPARISONS = [
+  {
+    id: 1,
+    cfo: "I need to know what this costs.",
+    cto: "I need to know what it costs us if we DON'T do it.",
+    theme: "Capital Allocation vs Risk of Inaction",
+  },
+  {
+    id: 2,
+    cfo: "What's the exact ROI of this technology initiative?",
+    cto: "What's the cost of waiting until our competitors do it first?",
+    theme: "Financial Metrics vs Market Speed",
+  },
+  {
+    id: 3,
+    cfo: "Can we defer this migration project to next quarter?",
+    cto: "We already pushed it three quarters. The debt is compounding.",
+    theme: "Cash Flow vs Tech Debt",
+  },
+  {
+    id: 4,
+    cfo: "Do we really need this infrastructure upgrade right now?",
+    cto: "Probably not. Until the day we do, and then it's a crisis.",
+    theme: "Prudence vs Resiliency",
+  },
+  {
+    id: 5,
+    cfo: "Why is the cloud budget 30% higher than forecast?",
+    cto: "Because customer traffic grew 200% and legacy code isn't optimized.",
+    theme: "Variance vs Scaling Realities",
+  },
+];
+
+export default function CFOvsCTO() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activePair = COMPARISONS[activeIndex];
+
+  return (
+    <section id="cfo-vs-cto" className="py-24 bg-[#0A0A0A] text-[#F5F3EE] px-6 md:px-12 border-t border-[#262626]/60 relative">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-[#262626] pb-8">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-mono text-[#D8B45A] uppercase tracking-[0.2em] mb-3">
+              <Scale className="w-3.5 h-3.5" />
+              <span>THE C-SUITE DIALECTIC</span>
+            </div>
+            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-[#F5F3EE]">
+              SAME BOARDROOM. <br className="hidden sm:block" />
+              DIFFERENT REALITIES.
+            </h2>
+          </div>
+          <p className="text-sm md:text-base text-[#A5A5A5] font-light max-w-md mt-4 md:mt-0 leading-relaxed">
+            Two distinct lenses. One balance sheet. Select a boardroom debate scenario below.
+          </p>
+        </div>
+
+        <div className="flex items-center gap-3 overflow-x-auto pb-4 mb-10 no-scrollbar">
+          {COMPARISONS.map((comp, idx) => (
+            <button
+              key={comp.id}
+              onClick={() => setActiveIndex(idx)}
+              className={`px-5 py-2.5 rounded-sm text-xs font-mono tracking-wider transition-all whitespace-nowrap flex items-center gap-2 ${
+                activeIndex === idx
+                  ? "bg-[#D8B45A] text-[#0A0A0A] font-bold shadow-lg"
+                  : "bg-[#111111] border border-[#262626] text-[#A5A5A5] hover:text-[#F5F3EE]"
+              }`}
+            >
+              <span>SCENARIO 0{idx + 1}</span>
+              <span className="opacity-60 hidden sm:inline">· {comp.theme}</span>
+            </button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
+          <div className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#0A0A0A] border border-[#D8B45A] text-[#D8B45A] font-mono font-bold text-xs items-center justify-center shadow-2xl">
+            VS
+          </div>
+
+          <motion.div
+            key={`cfo-${activePair.id}`}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-[#111111] border border-[#262626] rounded-sm p-8 sm:p-12 flex flex-col justify-between hover:border-[#D8B45A]/40 transition-colors gold-glow relative"
+          >
+            <div>
+              <div className="flex items-center justify-between pb-6 border-b border-[#262626] mb-8">
+                <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#D8B45A] font-bold">
+                  THE CHIEF FINANCIAL OFFICER
+                </span>
+                <span className="text-xs font-mono text-[#A5A5A5]">CAPEX / OPEX LENS</span>
+              </div>
+
+              <div className="text-xs font-mono text-[#A5A5A5] uppercase tracking-wider mb-2">
+                WHAT THE CFO SAYS:
+              </div>
+
+              <p className="font-serif-quote text-3xl sm:text-4xl text-[#F5F3EE] leading-snug font-normal italic">
+                &ldquo;{activePair.cfo}&rdquo;
+              </p>
+            </div>
+
+            <div className="mt-12 pt-6 border-t border-[#262626]/50 flex items-center justify-between text-xs font-mono text-[#A5A5A5]">
+              <span>CORE FOCUS: ROI & FINANCIAL GOVERNANCE</span>
+              <span className="text-[#D8B45A]">CFO</span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            key={`cto-${activePair.id}`}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-[#111111] border border-[#262626] rounded-sm p-8 sm:p-12 flex flex-col justify-between hover:border-[#D8B45A]/40 transition-colors gold-glow relative"
+          >
+            <div>
+              <div className="flex items-center justify-between pb-6 border-b border-[#262626] mb-8">
+                <span className="text-xs font-mono uppercase tracking-[0.25em] text-[#D8B45A] font-bold">
+                  THE CHIEF TECHNOLOGY OFFICER
+                </span>
+                <span className="text-xs font-mono text-[#A5A5A5]">ARCHITECTURE & SPEED LENS</span>
+              </div>
+
+              <div className="text-xs font-mono text-[#A5A5A5] uppercase tracking-wider mb-2">
+                WHAT THE CTO SAYS:
+              </div>
+
+              <p className="font-serif-quote text-3xl sm:text-4xl text-[#D8B45A] leading-snug font-normal italic">
+                &ldquo;{activePair.cto}&rdquo;
+              </p>
+            </div>
+
+            <div className="mt-12 pt-6 border-t border-[#262626]/50 flex items-center justify-between text-xs font-mono text-[#A5A5A5]">
+              <span>CORE FOCUS: VELOCITY & AGILITY</span>
+              <span className="text-[#D8B45A]">CTO</span>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="mt-12 flex items-center justify-center gap-4">
+          <button
+            onClick={() => setActiveIndex((prev) => (prev > 0 ? prev - 1 : COMPARISONS.length - 1))}
+            className="px-5 py-2.5 bg-[#111111] border border-[#262626] text-[#F5F3EE] hover:border-[#D8B45A] font-mono text-xs uppercase tracking-wider rounded-sm transition-colors"
+          >
+            ← PREVIOUS DEBATE
+          </button>
+          <span className="text-xs font-mono text-[#A5A5A5]">
+            {activeIndex + 1} / {COMPARISONS.length}
+          </span>
+          <button
+            onClick={() => setActiveIndex((prev) => (prev < COMPARISONS.length - 1 ? prev + 1 : 0))}
+            className="px-5 py-2.5 bg-[#111111] border border-[#262626] text-[#F5F3EE] hover:border-[#D8B45A] font-mono text-xs uppercase tracking-wider rounded-sm transition-colors flex items-center gap-1"
+          >
+            NEXT DEBATE →
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
