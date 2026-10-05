@@ -34,14 +34,14 @@ const AGENDA_HIGHLIGHTS = [
 
 export default function SummitCTA() {
   return (
-    <section id="summit" className="py-24 bg-gray-50 text-gray-900 px-6 md:px-12 border-y border-gray-200 relative overflow-hidden">
+    <section id="summit" className="py-24 bg-[#111827] text-white px-6 md:px-12 border-y border-gray-800 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* EVENT BRANDING */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white border border-gray-200 text-[10px] font-mono text-amber-600 uppercase tracking-widest mb-6 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#1F2937] border border-gray-700 text-[10px] font-mono text-amber-600 uppercase tracking-widest mb-6 shadow-sm">
             <Award className="w-3.5 h-3.5" />
             <span>OFFICIAL SUMMIT & AWARDS 2026</span>
           </div>
@@ -54,12 +54,12 @@ export default function SummitCTA() {
             />
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs font-mono text-gray-900">
-            <div className="flex items-center gap-2 px-4 py-2.5 rounded-sm bg-white border border-gray-200 shadow-sm">
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs font-mono text-white">
+            <div className="flex items-center gap-2 px-4 py-2.5 rounded-sm bg-[#1F2937] border border-gray-700 shadow-sm">
               <Calendar className="w-4 h-4 text-amber-600" />
               <span>20th November 2026</span>
             </div>
-            <div className="flex items-center gap-2 px-4 py-2.5 rounded-sm bg-white border border-gray-200 shadow-sm">
+            <div className="flex items-center gap-2 px-4 py-2.5 rounded-sm bg-[#1F2937] border border-gray-700 shadow-sm">
               <MapPin className="w-4 h-4 text-amber-600" />
               <span>Hyderabad, India</span>
             </div>
@@ -69,11 +69,11 @@ export default function SummitCTA() {
         {/* AGENDA HIGHLIGHTS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
           {AGENDA_HIGHLIGHTS.map((agenda, i) => (
-            <div key={i} className="bg-white border border-gray-200 p-8 rounded-sm hover:border-amber-600/50 transition-colors shadow-sm">
+            <div key={i} className="bg-[#FDFCF8] border border-gray-200 p-8 rounded-sm hover:border-amber-600/50 transition-colors shadow-sm">
               <h3 className="font-editorial-heading text-xl font-medium text-gray-900 mb-3 uppercase leading-tight">
                 {agenda.title}
               </h3>
-              <p className="text-sm font-light text-gray-600 leading-relaxed">
+              <p className="text-sm font-light text-gray-800 leading-relaxed">
                 {agenda.description}
               </p>
             </div>
@@ -83,27 +83,27 @@ export default function SummitCTA() {
         {/* THOUGHT LEADERS MARQUEE */}
         <div className="mb-20">
           <div className="text-center mb-8">
-            <span className="text-xs font-mono text-gray-500 uppercase tracking-widest">
+            <span className="text-xs font-mono text-gray-400 uppercase tracking-widest">
               FEATURING INSIGHTS FROM THOUGHT LEADERS AT:
             </span>
           </div>
           <div className="overflow-hidden relative w-full py-4 group pause-on-hover">
-            <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-            <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-[#111827] to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-[#111827] to-transparent z-10 pointer-events-none" />
             
             <div className="flex gap-4 w-max animate-marquee-ltr">
               {[...SPEAKERS, ...SPEAKERS, ...SPEAKERS].map((speaker, index) => (
                 <div
                   key={index}
-                  className="w-[280px] shrink-0 bg-white border border-gray-200 rounded-sm p-6 flex flex-col justify-center items-center text-center shadow-sm hover:border-amber-600/50 transition-colors"
+                  className="w-[280px] shrink-0 bg-[#1F2937] border border-gray-800 rounded-sm p-6 flex flex-col justify-center items-center text-center shadow-sm hover:border-amber-600/50 transition-colors"
                 >
-                  <h4 className="font-editorial-heading text-lg text-gray-900 font-medium">
+                  <h4 className="font-editorial-heading text-lg text-white font-medium">
                     {speaker.name}
                   </h4>
                   <p className="text-xs font-mono text-amber-600 mt-2 mb-1">
                     {speaker.role}
                   </p>
-                  <p className="text-xs text-gray-500 font-light truncate w-full">
+                  <p className="text-xs text-gray-400 font-light truncate w-full">
                     {speaker.company}
                   </p>
                 </div>
@@ -113,12 +113,12 @@ export default function SummitCTA() {
         </div>
 
         {/* CTA SECTION */}
-        <div className="bg-white border border-gray-200 rounded-sm p-8 sm:p-12 shadow-lg flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="bg-[#FDFCF8] border border-amber-600/20 rounded-sm p-8 sm:p-12 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="max-w-xl text-center md:text-left">
             <h3 className="font-editorial-heading text-3xl font-light text-gray-900 mb-2 uppercase">
               The conversation continues in Hyderabad.
             </h3>
-            <p className="text-gray-600 font-light text-sm">
+            <p className="text-gray-800 font-light text-sm">
               Secure your seat for the ultimate CFO × CTO showdown. Bring the questions you submitted here into the room.
             </p>
           </div>

@@ -71,7 +71,7 @@ const PROMPTS = [
 
 export default function PromptCards({ onSelectPrompt }: PromptCardsProps) {
   return (
-    <section id="prompts" className="py-24 bg-white text-gray-900 px-6 md:px-12 border-t border-gray-200/60">
+    <section id="prompts" className="py-24 bg-transparent text-gray-900 px-6 md:px-12 border-t border-gray-200/60">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-gray-200 pb-8">
           <div>
@@ -89,15 +89,15 @@ export default function PromptCards({ onSelectPrompt }: PromptCardsProps) {
         </div>
 
         <div className="overflow-hidden relative w-full py-4 group pause-on-hover">
-          <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-[#FDFCF8] to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-[#FDFCF8] to-transparent z-10 pointer-events-none" />
           
           <div className="flex gap-6 w-max animate-marquee-ltr">
             {[...PROMPTS, ...PROMPTS, ...PROMPTS, ...PROMPTS].map((prompt, index) => (
               <div
                 key={`${prompt.id}-${index}`}
                 onClick={() => onSelectPrompt(prompt.text)}
-                className="w-[300px] md:w-[400px] shrink-0 bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/70 transition-all duration-300 cursor-pointer relative shadow-xl whitespace-normal"
+                className="w-[300px] md:w-[400px] shrink-0 bg-white border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/70 transition-all duration-300 cursor-pointer relative shadow-md whitespace-normal"
               >
                 <div className="flex items-center justify-between text-xs font-mono text-gray-600 mb-8">
                   <span className="text-amber-600 font-light">{prompt.num}</span>

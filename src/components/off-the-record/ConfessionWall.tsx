@@ -49,7 +49,7 @@ export default function ConfessionWall({
   ];
 
   return (
-    <section id="confessions" className="py-24 bg-white text-gray-900 px-6 md:px-12 border-t border-gray-200/60 relative">
+    <section id="confessions" className="py-24 bg-transparent text-gray-900 px-6 md:px-12 border-t border-gray-200/60 relative">
       <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -70,7 +70,7 @@ export default function ConfessionWall({
           <div className="flex items-center gap-3">
             <button
               onClick={onRefresh}
-              className="p-3 bg-gray-50 border border-gray-200 text-gray-600 hover:text-amber-600 rounded-sm transition-colors flex items-center gap-2 text-xs font-mono"
+              className="p-3 bg-white border border-gray-200 text-gray-600 hover:text-amber-600 rounded-sm transition-colors flex items-center gap-2 text-xs font-mono shadow-sm"
               title="Refresh Confessions"
             >
               <RefreshCw className="w-4 h-4" />
@@ -96,7 +96,7 @@ export default function ConfessionWall({
               className={`px-4 py-2 rounded-sm text-xs font-mono tracking-wider transition-all whitespace-nowrap ${
                 selectedRole === r
                   ? "bg-amber-600 text-white font-light shadow-md"
-                  : "bg-gray-50 border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-amber-600/40"
+                  : "bg-white border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-amber-600/40 shadow-sm"
               }`}
             >
               {r}
@@ -107,8 +107,8 @@ export default function ConfessionWall({
         {filteredConfessions.length > 0 ? (
           <div className="overflow-hidden relative w-full py-4 group pause-on-hover">
             {/* Fade edges */}
-            <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-[#FDFCF8] to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-[#FDFCF8] to-transparent z-10 pointer-events-none" />
             
             <div
               className="flex gap-6 w-max animate-marquee-rtl"
@@ -116,7 +116,7 @@ export default function ConfessionWall({
               {[...filteredConfessions, ...filteredConfessions, ...filteredConfessions, ...filteredConfessions].map((item, index) => (
                 <div
                   key={`${item.id}-${index}`}
-                  className="w-[300px] md:w-[400px] shrink-0 bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/60 transition-all duration-300 relative shadow-xl whitespace-normal"
+                  className="w-[300px] md:w-[400px] shrink-0 bg-white border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/60 transition-all duration-300 relative shadow-md whitespace-normal"
                 >
                   <div className="text-4xl font-serif text-amber-600/30 mb-4 select-none">
                     &ldquo;
@@ -156,7 +156,7 @@ export default function ConfessionWall({
             </div>
           </div>
         ) : (
-          <div className="py-20 text-center border border-dashed border-gray-200 rounded-sm bg-gray-50/40">
+          <div className="py-20 text-center border border-dashed border-gray-200 rounded-sm bg-white shadow-sm">
             <MessageSquare className="w-10 h-10 text-amber-600 mx-auto mb-4 opacity-50" />
             <h3 className="font-editorial-heading text-2xl text-gray-900 uppercase font-light">
               NO CONFESSIONS IN THIS CATEGORY YET

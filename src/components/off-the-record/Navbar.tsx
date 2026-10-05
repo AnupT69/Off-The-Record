@@ -46,8 +46,8 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-md border-b border-gray-200 py-3.5 shadow-2xl"
-            : "bg-gradient-to-b from-gray-900/80 to-transparent py-6"
+            ? "bg-[#FDFCF8]/95 backdrop-blur-md border-b border-gray-200 py-3.5 shadow-md"
+            : "bg-gradient-to-b from-[#111827]/90 to-transparent py-6"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -56,28 +56,28 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
               href="https://www.theforumhouse.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center space-x-2.5 text-xs tracking-[0.2em] font-mono text-gray-600 hover:text-amber-600 transition-colors duration-300"
+              className={`group flex items-center space-x-2.5 text-xs tracking-[0.2em] font-mono transition-colors duration-300 ${scrolled ? 'text-gray-600 hover:text-amber-600' : 'text-gray-300 hover:text-amber-600'}`}
             >
               <span className="w-2 h-2 rounded-full bg-amber-600 inline-block animate-pulse" />
               <span className="font-medium uppercase">The Forum House</span>
             </a>
-            <span className="text-gray-200">/</span>
-            <span className="text-[10px] uppercase font-mono tracking-widest text-gray-600 hidden sm:inline-block">
+            <span className={scrolled ? "text-gray-400" : "text-gray-600"}>/</span>
+            <span className={`text-[10px] uppercase font-mono tracking-widest hidden sm:inline-block ${scrolled ? "text-gray-500" : "text-gray-500"}`}>
               HYDERABAD 2026
             </span>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.15em] font-light text-gray-600">
+          <nav className={`hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.15em] font-light ${scrolled ? "text-gray-600" : "text-gray-400"}`}>
             <button
               onClick={() => scrollToSection("confessions")}
-              className="hover:text-gray-900 transition-colors duration-200"
+              className={`transition-colors duration-200 ${scrolled ? "hover:text-gray-900" : "hover:text-white"}`}
             >
               The Confessions
             </button>
 
             <button
               onClick={() => scrollToSection("questions")}
-              className="hover:text-gray-900 transition-colors duration-200"
+              className={`transition-colors duration-200 ${scrolled ? "hover:text-gray-900" : "hover:text-white"}`}
             >
               Unspoken Questions
             </button>
@@ -90,15 +90,19 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <span className="text-[10px] font-mono text-gray-600 flex items-center gap-1.5 px-2.5 py-1 rounded bg-gray-50 border border-gray-200">
+            <span className={`text-[10px] font-mono flex items-center gap-1.5 px-2.5 py-1 rounded border ${scrolled ? "bg-[#FDFCF8] border-gray-200 text-gray-600" : "bg-[#1F2937] border-gray-800 text-gray-400"}`}>
               <Lock className="w-3 h-3 text-amber-600" />
               100% ANONYMOUS
             </span>
             <button
               onClick={onOpenConfessModal}
-              className="relative group px-5 py-2 rounded-sm text-xs font-medium tracking-wider uppercase bg-gray-900 text-white hover:bg-amber-600 transition-all duration-300 transform active:scale-95 shadow-lg"
+              className={`relative group px-5 py-2 rounded-sm text-xs font-medium tracking-wider uppercase transition-all duration-300 transform active:scale-95 shadow-lg ${
+                scrolled 
+                ? "bg-gray-900 text-white hover:bg-amber-600" 
+                : "bg-amber-600 text-white hover:bg-white hover:text-gray-900"
+              }`}
             >
-              CONFESS <span className="text-amber-600 group-hover:text-white">→</span>
+              CONFESS <span className={`${scrolled ? "text-amber-600 group-hover:text-white" : "text-white group-hover:text-gray-900"}`}>→</span>
             </button>
           </div>
 
@@ -111,7 +115,7 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-gray-900 hover:text-amber-600"
+              className={`p-2 hover:text-amber-600 ${scrolled ? "text-gray-900" : "text-white"}`}
               aria-label="Toggle Navigation"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

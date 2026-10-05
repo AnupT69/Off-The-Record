@@ -42,19 +42,19 @@ const BOARDROOM_QUESTIONS = [
 
 export default function Questions({ onOpenConfessModalWithQuestion }: QuestionsProps) {
   return (
-    <section id="questions" className="py-24 bg-white text-gray-900 px-6 md:px-12 border-t border-gray-200/60 relative">
+    <section id="questions" className="py-24 bg-[#111827] text-white px-6 md:px-12 border-t border-gray-800/60 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-gray-200 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-gray-800 pb-8">
           <div>
             <div className="flex items-center gap-2 text-xs font-mono text-amber-600 uppercase tracking-[0.2em] mb-3">
               <HelpCircle className="w-3.5 h-3.5" />
               <span>THE EXECUTIVE INQUIRY</span>
             </div>
-            <h2 className="font-editorial-heading text-3xl sm:text-4xl font-light uppercase tracking-tight text-gray-900">
+            <h2 className="font-editorial-heading text-3xl sm:text-4xl font-light uppercase tracking-tight text-white">
               QUESTIONS WE DON&apos;T ASK.
             </h2>
           </div>
-          <p className="text-sm md:text-base text-gray-600 font-light max-w-md mt-4 md:mt-0 leading-relaxed">
+          <p className="text-sm md:text-base text-gray-400 font-light max-w-md mt-4 md:mt-0 leading-relaxed">
             The hard queries we think about, but rarely put on the slide deck.
           </p>
         </div>
@@ -68,23 +68,23 @@ export default function Questions({ onOpenConfessModalWithQuestion }: QuestionsP
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
               onClick={() => onOpenConfessModalWithQuestion(`In response to: "${q.question}"`)}
-              className="group bg-gray-50 border border-gray-200 hover:border-amber-600/70 rounded-sm p-8 md:p-10 transition-all duration-300 cursor-pointer flex flex-col md:flex-row items-start md:items-center justify-between gap-6 gold-border-glow"
+              className="group bg-[#1F2937] border border-gray-800 hover:border-amber-600/70 rounded-sm p-8 md:p-10 transition-all duration-300 cursor-pointer flex flex-col md:flex-row items-start md:items-center justify-between gap-6 gold-border-glow"
             >
               <div className="flex items-start gap-6">
                 <span className="font-mono font-light text-2xl text-amber-600 pt-1">
                   {q.num}
                 </span>
                 <div>
-                  <span className="text-[10px] font-mono text-gray-600 uppercase tracking-widest block mb-2">
+                  <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest block mb-2">
                     {q.category}
                   </span>
-                  <h3 className="font-editorial-heading text-xl sm:text-2xl font-light text-gray-900 group-hover:text-amber-600 transition-colors leading-tight uppercase">
+                  <h3 className="font-editorial-heading text-xl sm:text-2xl font-light text-white group-hover:text-amber-600 transition-colors leading-tight uppercase">
                     {q.question}
                   </h3>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 text-xs font-mono text-gray-600 group-hover:text-gray-900 shrink-0 self-end md:self-center">
+              <div className="flex items-center gap-2 text-xs font-mono text-gray-400 group-hover:text-white shrink-0 self-end md:self-center">
                 <span>ANSWER ANONYMOUSLY</span>
                 <ArrowRight className="w-4 h-4 text-amber-600 group-hover:translate-x-1 transition-transform" />
               </div>

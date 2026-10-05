@@ -5,7 +5,7 @@ import { Compass } from "lucide-react";
 
 export default function WhyThisExists() {
   return (
-    <section className="py-28 bg-white text-gray-900 px-6 md:px-12 border-t border-gray-200/60 relative overflow-hidden ">
+    <section className="py-28 bg-transparent text-gray-900 px-6 md:px-12 border-t border-gray-200/60 relative overflow-hidden ">
       <div className="absolute top-1/2 right-10 w-[600px] h-[600px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative z-10 text-center md:text-left">
