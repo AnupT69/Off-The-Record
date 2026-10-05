@@ -3,8 +3,8 @@
 
 @layer base {
   body {
-    background-color: #0A0A0A;
-    color: #F5F3EE;
+    background-color: #FFFFFF;
+    color: #111827;
   }
 }
 
@@ -17,29 +17,13 @@
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
-.bg-grain {
-  background-image: radial-gradient(rgba(216, 180, 90, 0.04) 1px, transparent 0);
-  background-size: 32px 32px;
-}
-
-.scanline-bg {
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0),
-    rgba(255,255,255,0) 50%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.3)
-  );
-  background-size: 100% 4px;
-}
-
 .gold-glow {
-  box-shadow: 0 0 35px -5px rgba(216, 180, 90, 0.18);
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
 }
 
 .gold-border-glow:hover {
-  border-color: rgba(216, 180, 90, 0.5);
-  box-shadow: 0 0 25px -5px rgba(216, 180, 90, 0.25);
+  border-color: #e5e7eb;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
 }
 
 .no-scrollbar::-webkit-scrollbar {

@@ -49,20 +49,20 @@ export default function ConfessionWall({
   ];
 
   return (
-    <section id="confessions" className="py-24 bg-[#0A0A0A] text-[#F5F3EE] px-6 md:px-12 border-t border-[#262626]/60 relative">
-      <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-[#D8B45A]/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="confessions" className="py-24 bg-white text-gray-900 px-6 md:px-12 border-t border-gray-200/60 relative">
+      <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 border-b border-[#262626] pb-8 gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 border-b border-gray-200 pb-8 gap-6">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-[#D8B45A] uppercase tracking-[0.2em] mb-3">
+            <div className="flex items-center gap-2 text-xs font-mono text-amber-600 uppercase tracking-[0.2em] mb-3">
               <Lock className="w-3.5 h-3.5" />
               <span>THE LIVE BOARDROOM WALL</span>
             </div>
-            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-[#F5F3EE]">
+            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-gray-900">
               WHAT THE ROOM IS REALLY THINKING.
             </h2>
-            <p className="text-sm md:text-base text-[#A5A5A5] font-light max-w-xl mt-3 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-600 font-light max-w-xl mt-3 leading-relaxed">
               Anonymous thoughts from CFOs, CTOs, CIOs and senior finance/technology leaders.
             </p>
           </div>
@@ -70,7 +70,7 @@ export default function ConfessionWall({
           <div className="flex items-center gap-3">
             <button
               onClick={onRefresh}
-              className="p-3 bg-[#111111] border border-[#262626] text-[#A5A5A5] hover:text-[#D8B45A] rounded-sm transition-colors flex items-center gap-2 text-xs font-mono"
+              className="p-3 bg-gray-50 border border-gray-200 text-gray-600 hover:text-amber-600 rounded-sm transition-colors flex items-center gap-2 text-xs font-mono"
               title="Refresh Confessions"
             >
               <RefreshCw className="w-4 h-4" />
@@ -78,15 +78,15 @@ export default function ConfessionWall({
             </button>
             <button
               onClick={onOpenConfessModal}
-              className="px-6 py-3 bg-[#F5F3EE] text-[#0A0A0A] font-bold text-xs uppercase tracking-widest rounded-sm hover:bg-[#D8B45A] transition-colors shadow-lg"
+              className="px-6 py-3 bg-gray-900 text-white font-bold text-xs uppercase tracking-widest rounded-sm hover:bg-amber-600 transition-colors shadow-lg"
             >
               + ADD YOUR CONFESSION
             </button>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-12 no-scrollbar border-b border-[#262626]/40">
-          <span className="text-xs font-mono text-[#A5A5A5] uppercase tracking-wider mr-2 hidden sm:inline">
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-12 no-scrollbar border-b border-gray-200/40">
+          <span className="text-xs font-mono text-gray-600 uppercase tracking-wider mr-2 hidden sm:inline">
             FILTER BY ROLE:
           </span>
           {rolesList.map((r) => (
@@ -95,8 +95,8 @@ export default function ConfessionWall({
               onClick={() => setSelectedRole(r)}
               className={`px-4 py-2 rounded-sm text-xs font-mono tracking-wider transition-all whitespace-nowrap ${
                 selectedRole === r
-                  ? "bg-[#D8B45A] text-[#0A0A0A] font-bold shadow-md"
-                  : "bg-[#111111] border border-[#262626] text-[#A5A5A5] hover:text-[#F5F3EE] hover:border-[#D8B45A]/40"
+                  ? "bg-amber-600 text-white font-bold shadow-md"
+                  : "bg-gray-50 border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-[#D8B45A]/40"
               }`}
             >
               {r}
@@ -115,25 +115,25 @@ export default function ConfessionWall({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.4, delay: index * 0.04 }}
-                  className="bg-[#111111] border border-[#262626] rounded-sm p-8 flex flex-col justify-between hover:border-[#D8B45A]/60 transition-all duration-300 relative group shadow-xl"
+                  className="bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-[#D8B45A]/60 transition-all duration-300 relative group shadow-xl"
                 >
-                  <div className="text-4xl font-serif text-[#D8B45A]/30 mb-4 select-none">
+                  <div className="text-4xl font-serif text-amber-600/30 mb-4 select-none">
                     &ldquo;
                   </div>
 
                   <div className="mb-8">
-                    <p className="font-serif-quote text-2xl text-[#F5F3EE] leading-relaxed font-normal italic">
+                    <p className="font-serif-quote text-2xl text-gray-900 leading-relaxed font-normal italic">
                       &ldquo;{item.confession}&rdquo;
                     </p>
                   </div>
 
-                  <div className="pt-6 border-t border-[#262626]/60 flex items-center justify-between">
+                  <div className="pt-6 border-t border-gray-200/60 flex items-center justify-between">
                     <div>
-                      <span className="text-xs font-mono text-[#D8B45A] uppercase tracking-wider block font-semibold">
+                      <span className="text-xs font-mono text-amber-600 uppercase tracking-wider block font-semibold">
                         — Anonymous
                         {item.role && item.role !== "Other" ? `, ${item.role}` : ""}
                       </span>
-                      <span className="text-[10px] font-mono text-[#A5A5A5] block mt-0.5">
+                      <span className="text-[10px] font-mono text-gray-600 block mt-0.5">
                         {new Date(item.createdAt).toLocaleDateString("en-US", {
                           month: "short",
                           day: "numeric",
@@ -144,9 +144,9 @@ export default function ConfessionWall({
 
                     <button
                       onClick={() => toggleLike(item.id)}
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#0A0A0A] border border-[#262626] text-xs font-mono text-[#A5A5A5] hover:text-[#D8B45A] hover:border-[#D8B45A]/40 transition-all active:scale-95"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-white border border-gray-200 text-xs font-mono text-gray-600 hover:text-amber-600 hover:border-[#D8B45A]/40 transition-all active:scale-95"
                     >
-                      <Heart className="w-3.5 h-3.5 text-[#D8B45A] fill-[#D8B45A]/20" />
+                      <Heart className="w-3.5 h-3.5 text-amber-600 fill-[#D8B45A]/20" />
                       <span>{likedMap[item.id] || 0}</span>
                     </button>
                   </div>
@@ -155,17 +155,17 @@ export default function ConfessionWall({
             </AnimatePresence>
           </div>
         ) : (
-          <div className="py-20 text-center border border-dashed border-[#262626] rounded-sm bg-[#111111]/40">
-            <MessageSquare className="w-10 h-10 text-[#D8B45A] mx-auto mb-4 opacity-50" />
-            <h3 className="font-editorial-heading text-2xl text-[#F5F3EE] uppercase font-bold">
+          <div className="py-20 text-center border border-dashed border-gray-200 rounded-sm bg-gray-50/40">
+            <MessageSquare className="w-10 h-10 text-amber-600 mx-auto mb-4 opacity-50" />
+            <h3 className="font-editorial-heading text-2xl text-gray-900 uppercase font-bold">
               NO CONFESSIONS IN THIS CATEGORY YET
             </h3>
-            <p className="text-sm font-mono text-[#A5A5A5] mt-2 mb-6">
+            <p className="text-sm font-mono text-gray-600 mt-2 mb-6">
               Be the first executive to share an anonymous thought for {selectedRole}.
             </p>
             <button
               onClick={onOpenConfessModal}
-              className="px-6 py-3 bg-[#D8B45A] text-[#0A0A0A] font-bold text-xs uppercase tracking-widest rounded-sm"
+              className="px-6 py-3 bg-amber-600 text-white font-bold text-xs uppercase tracking-widest rounded-sm"
             >
               BE THE FIRST TO CONFESS →
             </button>

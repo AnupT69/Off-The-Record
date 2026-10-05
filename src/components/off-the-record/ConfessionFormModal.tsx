@@ -106,7 +106,7 @@ export default function ConfessionFormModal({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-[#0A0A0A]/90 backdrop-blur-xl"
+          className="fixed inset-0 bg-white/90 backdrop-blur-xl"
         />
 
         <motion.div
@@ -114,13 +114,13 @@ export default function ConfessionFormModal({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="relative max-w-2xl w-full bg-[#111111] border border-[#262626] rounded-sm p-6 sm:p-10 z-10 shadow-2xl overflow-hidden gold-glow"
+          className="relative max-w-2xl w-full bg-gray-50 border border-gray-200 rounded-sm p-6 sm:p-10 z-10 shadow-2xl overflow-hidden gold-glow"
         >
-          <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#D8B45A]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 p-2 text-[#A5A5A5] hover:text-[#F5F3EE] hover:bg-[#262626]/50 rounded-full transition-colors"
+            className="absolute top-6 right-6 p-2 text-gray-600 hover:text-gray-900 hover:bg-[#262626]/50 rounded-full transition-colors"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -129,21 +129,21 @@ export default function ConfessionFormModal({
           {!isSubmitted ? (
             <div>
               <div className="mb-6">
-                <div className="flex items-center gap-2 text-xs font-mono text-[#D8B45A] uppercase tracking-widest mb-2">
+                <div className="flex items-center gap-2 text-xs font-mono text-amber-600 uppercase tracking-widest mb-2">
                   <Lock className="w-3.5 h-3.5" />
                   <span>100% ANONYMOUS SUBMISSION</span>
                 </div>
-                <h2 className="font-editorial-heading text-4xl sm:text-5xl font-extrabold uppercase text-[#F5F3EE] tracking-tight">
+                <h2 className="font-editorial-heading text-4xl sm:text-5xl font-extrabold uppercase text-gray-900 tracking-tight">
                   SAY IT.
                 </h2>
-                <p className="text-sm font-mono text-[#A5A5A5] mt-1 tracking-wide">
+                <p className="text-sm font-mono text-gray-600 mt-1 tracking-wide">
                   No names. No titles. No consequences.
                 </p>
               </div>
 
               {selectedPrompt && (
-                <div className="mb-4 p-3 bg-[#0A0A0A] border border-[#262626] rounded text-xs text-[#D8B45A] font-mono">
-                  <span className="text-[#A5A5A5] uppercase tracking-wider block text-[10px] mb-1">
+                <div className="mb-4 p-3 bg-white border border-gray-200 rounded text-xs text-amber-600 font-mono">
+                  <span className="text-gray-600 uppercase tracking-wider block text-[10px] mb-1">
                     SELECTED PROMPT:
                   </span>
                   &ldquo;{selectedPrompt}&rdquo;
@@ -159,10 +159,10 @@ export default function ConfessionFormModal({
                       maxLength={1000}
                       rows={5}
                       placeholder="Something I've always wanted to say about Finance × Technology..."
-                      className="w-full bg-[#0A0A0A] border border-[#262626] rounded-sm p-4 text-[#F5F3EE] placeholder-[#A5A5A5]/40 text-base font-serif-quote focus:outline-none focus:border-[#D8B45A] transition-colors resize-none leading-relaxed"
+                      className="w-full bg-white border border-gray-200 rounded-sm p-4 text-gray-900 placeholder-[#A5A5A5]/40 text-base font-serif-quote focus:outline-none focus:border-[#D8B45A] transition-colors resize-none leading-relaxed"
                       required
                     />
-                    <div className="absolute bottom-3 right-3 text-[10px] font-mono text-[#A5A5A5]">
+                    <div className="absolute bottom-3 right-3 text-[10px] font-mono text-gray-600">
                       {confession.length} / 1000
                     </div>
                   </div>
@@ -173,10 +173,10 @@ export default function ConfessionFormModal({
 
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <label className="text-xs font-mono uppercase tracking-wider text-[#F5F3EE] font-semibold">
-                      WHO ARE YOU? <span className="text-[#A5A5A5] font-normal">(OPTIONAL)</span>
+                    <label className="text-xs font-mono uppercase tracking-wider text-gray-900 font-semibold">
+                      WHO ARE YOU? <span className="text-gray-600 font-normal">(OPTIONAL)</span>
                     </label>
-                    <span className="text-[11px] font-mono text-[#D8B45A]">
+                    <span className="text-[11px] font-mono text-amber-600">
                       Identity not required
                     </span>
                   </div>
@@ -197,16 +197,16 @@ export default function ConfessionFormModal({
                         onClick={() => setRole(role === r ? "" : r)}
                         className={`px-3 py-2 text-xs font-mono rounded-sm border text-left transition-all ${
                           role === r
-                            ? "bg-[#D8B45A] text-[#0A0A0A] border-[#D8B45A] font-bold"
-                            : "bg-[#0A0A0A] border-[#262626] text-[#A5A5A5] hover:border-[#D8B45A]/50 hover:text-[#F5F3EE]"
+                            ? "bg-amber-600 text-white border-[#D8B45A] font-bold"
+                            : "bg-white border-gray-200 text-gray-600 hover:border-[#D8B45A]/50 hover:text-gray-900"
                         }`}
                       >
                         {r}
                       </button>
                     ))}
                   </div>
-                  <p className="text-[11px] font-mono text-[#A5A5A5] mt-2.5 flex items-center gap-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#D8B45A]" />
+                  <p className="text-[11px] font-mono text-gray-600 mt-2.5 flex items-center gap-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
                     You don&apos;t have to tell us who you are.
                   </p>
                 </div>
@@ -215,17 +215,17 @@ export default function ConfessionFormModal({
                   <button
                     type="submit"
                     disabled={isSubmitting || confession.trim().length < 10}
-                    className="w-full py-4 rounded-sm bg-[#F5F3EE] text-[#0A0A0A] font-extrabold text-xs uppercase tracking-[0.2em] hover:bg-[#D8B45A] transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2 group shadow-xl"
+                    className="w-full py-4 rounded-sm bg-gray-900 text-white font-extrabold text-xs uppercase tracking-[0.2em] hover:bg-amber-600 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2 group shadow-xl"
                   >
                     {isSubmitting ? (
                       <>
-                        <Loader2 className="w-4 h-4 animate-spin text-[#0A0A0A]" />
+                        <Loader2 className="w-4 h-4 animate-spin text-white" />
                         <span>ENTERING THE RECORD...</span>
                       </>
                     ) : (
                       <>
                         <span>PUT IT ON THE RECORD</span>
-                        <ArrowRight className="w-4 h-4 text-[#0A0A0A] group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
                       </>
                     )}
                   </button>
@@ -238,30 +238,30 @@ export default function ConfessionFormModal({
               animate={{ opacity: 1, scale: 1 }}
               className="py-8 text-center flex flex-col items-center justify-center"
             >
-              <div className="w-16 h-16 rounded-full bg-[#D8B45A]/10 border border-[#D8B45A]/30 flex items-center justify-center mb-6">
-                <CheckCircle2 className="w-8 h-8 text-[#D8B45A]" />
+              <div className="w-16 h-16 rounded-full bg-amber-600/10 border border-[#D8B45A]/30 flex items-center justify-center mb-6">
+                <CheckCircle2 className="w-8 h-8 text-amber-600" />
               </div>
 
-              <div className="text-xs font-mono text-[#D8B45A] uppercase tracking-widest mb-2">
+              <div className="text-xs font-mono text-amber-600 uppercase tracking-widest mb-2">
                 CONFESSION RECORDED
               </div>
 
-              <h2 className="font-editorial-heading text-4xl sm:text-5xl font-black uppercase text-[#F5F3EE] tracking-tight mb-3">
+              <h2 className="font-editorial-heading text-4xl sm:text-5xl font-black uppercase text-gray-900 tracking-tight mb-3">
                 IT&apos;S OFF THE RECORD.
               </h2>
 
-              <p className="font-serif-quote italic text-xl text-[#F5F3EE] mb-4">
+              <p className="font-serif-quote italic text-xl text-gray-900 mb-4">
                 &ldquo;Your confession has entered the House.&rdquo;
               </p>
 
-              <p className="text-sm text-[#A5A5A5] max-w-md font-light leading-relaxed mb-8">
+              <p className="text-sm text-gray-600 max-w-md font-light leading-relaxed mb-8">
                 Thank you for saying what usually stays unsaid. Your thought will be displayed anonymously on the wall.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                 <button
                   onClick={onClose}
-                  className="px-8 py-3.5 rounded-sm bg-[#F5F3EE] text-[#0A0A0A] font-bold text-xs uppercase tracking-widest hover:bg-[#D8B45A] transition-colors"
+                  className="px-8 py-3.5 rounded-sm bg-gray-900 text-white font-bold text-xs uppercase tracking-widest hover:bg-amber-600 transition-colors"
                 >
                   RETURN TO SITE →
                 </button>
@@ -272,7 +272,7 @@ export default function ConfessionFormModal({
                     setRole("");
                     setSelectedPrompt("");
                   }}
-                  className="px-6 py-3.5 rounded-sm bg-[#0A0A0A] border border-[#262626] text-[#A5A5A5] hover:text-[#F5F3EE] font-mono text-xs uppercase tracking-widest transition-colors"
+                  className="px-6 py-3.5 rounded-sm bg-white border border-gray-200 text-gray-600 hover:text-gray-900 font-mono text-xs uppercase tracking-widest transition-colors"
                 >
                   ADD ANOTHER CONFESSION
                 </button>

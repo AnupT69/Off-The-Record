@@ -58,7 +58,7 @@ export default function OffTheRecordClientPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-[#F5F3EE] selection:bg-[#D8B45A] selection:text-[#0A0A0A] font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-white text-gray-900 selection:bg-gray-200 selection:text-gray-900 font-sans overflow-x-hidden">
       <Navbar onOpenConfessModal={() => handleOpenModal()} />
 
       <main>
