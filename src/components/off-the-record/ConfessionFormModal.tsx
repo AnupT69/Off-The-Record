@@ -120,7 +120,7 @@ export default function ConfessionFormModal({
 
           <button
             onClick={onClose}
-            className="absolute top-6 right-6 p-2 text-gray-600 hover:text-gray-900 hover:bg-[#262626]/50 rounded-full transition-colors"
+            className="absolute top-6 right-6 p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200/50 rounded-full transition-colors"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -159,7 +159,7 @@ export default function ConfessionFormModal({
                       maxLength={1000}
                       rows={5}
                       placeholder="Something I've always wanted to say about Finance × Technology..."
-                      className="w-full bg-white border border-gray-200 rounded-sm p-4 text-gray-900 placeholder-[#A5A5A5]/40 text-base font-serif-quote focus:outline-none focus:border-[#D8B45A] transition-colors resize-none leading-relaxed"
+                      className="w-full bg-white border border-gray-200 rounded-sm p-4 text-gray-900 placeholder-gray-500/40 text-base font-serif-quote focus:outline-none focus:border-amber-600 transition-colors resize-none leading-relaxed"
                       required
                     />
                     <div className="absolute bottom-3 right-3 text-[10px] font-mono text-gray-600">
@@ -173,8 +173,8 @@ export default function ConfessionFormModal({
 
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <label className="text-xs font-mono uppercase tracking-wider text-gray-900 font-semibold">
-                      WHO ARE YOU? <span className="text-gray-600 font-normal">(OPTIONAL)</span>
+                    <label className="text-xs font-mono uppercase tracking-wider text-gray-900 font-medium">
+                      WHO ARE YOU? <span className="text-gray-600 font-light">(OPTIONAL)</span>
                     </label>
                     <span className="text-[11px] font-mono text-amber-600">
                       Identity not required
@@ -197,8 +197,8 @@ export default function ConfessionFormModal({
                         onClick={() => setRole(role === r ? "" : r)}
                         className={`px-3 py-2 text-xs font-mono rounded-sm border text-left transition-all ${
                           role === r
-                            ? "bg-amber-600 text-white border-[#D8B45A] font-bold"
-                            : "bg-white border-gray-200 text-gray-600 hover:border-[#D8B45A]/50 hover:text-gray-900"
+                            ? "bg-amber-600 text-white border-amber-600 font-light"
+                            : "bg-white border-gray-200 text-gray-600 hover:border-amber-600/50 hover:text-gray-900"
                         }`}
                       >
                         {r}
@@ -238,7 +238,7 @@ export default function ConfessionFormModal({
               animate={{ opacity: 1, scale: 1 }}
               className="py-8 text-center flex flex-col items-center justify-center"
             >
-              <div className="w-16 h-16 rounded-full bg-amber-600/10 border border-[#D8B45A]/30 flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-full bg-amber-600/10 border border-amber-600/30 flex items-center justify-center mb-6">
                 <CheckCircle2 className="w-8 h-8 text-amber-600" />
               </div>
 
@@ -246,7 +246,7 @@ export default function ConfessionFormModal({
                 CONFESSION RECORDED
               </div>
 
-              <h2 className="font-editorial-heading text-4xl sm:text-5xl font-black uppercase text-gray-900 tracking-tight mb-3">
+              <h2 className="font-editorial-heading text-4xl sm:text-5xl font-medium uppercase text-gray-900 tracking-tight mb-3">
                 IT&apos;S OFF THE RECORD.
               </h2>
 
@@ -261,7 +261,7 @@ export default function ConfessionFormModal({
               <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                 <button
                   onClick={onClose}
-                  className="px-8 py-3.5 rounded-sm bg-gray-900 text-white font-bold text-xs uppercase tracking-widest hover:bg-amber-600 transition-colors"
+                  className="px-8 py-3.5 rounded-sm bg-gray-900 text-white font-light text-xs uppercase tracking-widest hover:bg-amber-600 transition-colors"
                 >
                   RETURN TO SITE →
                 </button>

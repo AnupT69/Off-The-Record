@@ -6,10 +6,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
         <div className="space-y-3">
           <div className="flex items-center gap-3">
-            <span className="font-editorial-heading font-black text-2xl uppercase tracking-tighter text-gray-900">
+            <span className="font-editorial-heading font-medium text-2xl uppercase tracking-tighter text-gray-900">
               OFF THE RECORD
             </span>
-            <span className="px-2 py-0.5 rounded bg-gray-50 border border-gray-200 text-[10px] text-amber-600 uppercase tracking-widest font-semibold">
+            <span className="px-2 py-0.5 rounded bg-gray-50 border border-gray-200 text-[10px] text-amber-600 uppercase tracking-widest font-medium">
               CFO × CTO CONFESSIONS
             </span>
           </div>
@@ -24,18 +24,18 @@ export default function Footer() {
               href="https://www.theforumhouse.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-900 font-bold hover:text-amber-600 transition-colors"
+              className="text-gray-900 font-light hover:text-amber-600 transition-colors"
             >
               The Forum House
             </a>
-            <span className="text-[#262626]">·</span>
+            <span className="text-gray-200">·</span>
             <span className="font-serif italic text-amber-600">Belong. Express. Co-Create.</span>
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-8 text-gray-600">
           <div className="space-y-2">
-            <span className="text-gray-900 uppercase tracking-widest font-bold block mb-3 text-[11px]">
+            <span className="text-gray-900 uppercase tracking-widest font-light block mb-3 text-[11px]">
               CAMPAIGN
             </span>
             <a href="#confessions" className="block hover:text-amber-600 transition-colors">
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-2">
-            <span className="text-gray-900 uppercase tracking-widest font-bold block mb-3 text-[11px]">
+            <span className="text-gray-900 uppercase tracking-widest font-light block mb-3 text-[11px]">
               THE SUMMIT
             </span>
             <a

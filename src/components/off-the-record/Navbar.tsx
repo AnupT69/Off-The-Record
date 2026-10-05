@@ -47,7 +47,7 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           scrolled
             ? "bg-white/90 backdrop-blur-md border-b border-gray-200 py-3.5 shadow-2xl"
-            : "bg-gradient-to-b from-[#0A0A0A]/80 to-transparent py-6"
+            : "bg-gradient-to-b from-gray-900/80 to-transparent py-6"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -59,15 +59,15 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
               className="group flex items-center space-x-2.5 text-xs tracking-[0.2em] font-mono text-gray-600 hover:text-amber-600 transition-colors duration-300"
             >
               <span className="w-2 h-2 rounded-full bg-amber-600 inline-block animate-pulse" />
-              <span className="font-semibold uppercase">The Forum House</span>
+              <span className="font-medium uppercase">The Forum House</span>
             </a>
-            <span className="text-[#262626]">/</span>
+            <span className="text-gray-200">/</span>
             <span className="text-[10px] uppercase font-mono tracking-widest text-gray-600 hidden sm:inline-block">
               HYDERABAD 2026
             </span>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.15em] font-medium text-gray-600">
+          <nav className="hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.15em] font-light text-gray-600">
             <button
               onClick={() => scrollToSection("confessions")}
               className="hover:text-gray-900 transition-colors duration-200"
@@ -101,7 +101,7 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
             </span>
             <button
               onClick={onOpenConfessModal}
-              className="relative group px-5 py-2 rounded-sm text-xs font-semibold tracking-wider uppercase bg-gray-900 text-white hover:bg-amber-600 transition-all duration-300 transform active:scale-95 shadow-lg"
+              className="relative group px-5 py-2 rounded-sm text-xs font-medium tracking-wider uppercase bg-gray-900 text-white hover:bg-amber-600 transition-all duration-300 transform active:scale-95 shadow-lg"
             >
               CONFESS <span className="text-amber-600 group-hover:text-white">→</span>
             </button>
@@ -110,7 +110,7 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
           <div className="md:hidden flex items-center space-x-3">
             <button
               onClick={onOpenConfessModal}
-              className="px-3.5 py-1.5 bg-amber-600 text-white text-xs font-bold uppercase tracking-wider rounded-sm"
+              className="px-3.5 py-1.5 bg-amber-600 text-white text-xs font-light uppercase tracking-wider rounded-sm"
             >
               CONFESS
             </button>
@@ -169,7 +169,7 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
                     setMobileMenuOpen(false);
                     onOpenConfessModal();
                   }}
-                  className="px-5 py-2.5 bg-amber-600 text-white font-bold text-xs tracking-widest rounded-sm"
+                  className="px-5 py-2.5 bg-amber-600 text-white font-light text-xs tracking-widest rounded-sm"
                 >
                   CONFESS ANONYMOUSLY →
                 </button>

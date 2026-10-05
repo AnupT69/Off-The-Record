@@ -80,7 +80,7 @@ export default function PromptCards({ onSelectPrompt }: PromptCardsProps) {
               <span className="w-1.5 h-1.5 rounded-full bg-amber-600" />
               <span>CONFESSION STARTERS</span>
             </div>
-            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-gray-900">
+            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-medium uppercase tracking-tight text-gray-900">
               WE&apos;LL START.
             </h2>
           </div>
@@ -98,17 +98,17 @@ export default function PromptCards({ onSelectPrompt }: PromptCardsProps) {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               onClick={() => onSelectPrompt(prompt.text)}
-              className="group relative bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-[#D8B45A]/70 transition-all duration-300 cursor-pointer overflow-hidden gold-border-glow"
+              className="group relative bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/70 transition-all duration-300 cursor-pointer overflow-hidden gold-border-glow"
             >
               <div className="flex items-center justify-between text-xs font-mono text-gray-600 mb-8">
-                <span className="text-amber-600 font-bold">{prompt.num}</span>
+                <span className="text-amber-600 font-light">{prompt.num}</span>
                 <span className="px-2 py-0.5 rounded bg-white border border-gray-200 text-[10px] uppercase tracking-wider text-gray-600 group-hover:text-amber-600 transition-colors">
                   {prompt.tag}
                 </span>
               </div>
 
               <div className="my-auto">
-                <p className="font-serif-quote text-2xl md:text-2xl text-gray-900 group-hover:text-amber-600 transition-colors duration-300 leading-snug italic font-normal">
+                <p className="font-serif-quote text-2xl md:text-2xl text-gray-900 group-hover:text-amber-600 transition-colors duration-300 leading-snug italic font-light">
                   &ldquo;{prompt.text}&rdquo;
                 </p>
               </div>

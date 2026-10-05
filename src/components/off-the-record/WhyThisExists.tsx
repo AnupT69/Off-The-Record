@@ -15,7 +15,7 @@ export default function WhyThisExists() {
               <Compass className="w-3.5 h-3.5 text-amber-600" />
               <span>THE PHILOSOPHY</span>
             </div>
-            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-black uppercase tracking-tighter text-gray-900 leading-[0.95]">
+            <h2 className="font-editorial-heading text-3xl sm:text-4xl font-light uppercase tracking-tighter text-gray-900 leading-[0.95]">
               THE BEST <br />
               CONVERSATIONS <br />
               AREN&apos;T ALWAYS <br />
@@ -24,12 +24,12 @@ export default function WhyThisExists() {
           </div>
 
           <div className="lg:col-span-7 space-y-6 text-base sm:text-lg text-gray-600 font-light leading-relaxed border-l-0 lg:border-l border-gray-200 lg:pl-12">
-            <p className="text-gray-900 font-normal text-xl sm:text-2xl font-serif-quote italic">
+            <p className="text-gray-900 font-light text-lg sm:text-xl font-serif-quote italic">
               &ldquo;At The Forum House, we believe meaningful business relationships begin with honest conversations.&rdquo;
             </p>
 
             <p>
-              Off The Record creates an exclusive, unvarnished space for CFOs and CTOs to say what normally stays inside confidential boardroom walls.
+              An exclusive space for CFOs and CTOs to say what normally stays inside confidential boardroom walls.
             </p>
 
             <div className="py-4 border-y border-gray-200/60 grid grid-cols-3 gap-4 text-center font-mono text-xs uppercase tracking-widest text-amber-600">
@@ -38,13 +38,13 @@ export default function WhyThisExists() {
               <div>NO CORPORATE SPEECH</div>
             </div>
 
-            <p className="text-gray-900 font-medium text-lg">
-              Just the raw, unedited conversation that drives true organizational progress.
+            <p className="text-gray-900 font-light text-base">
+              Just the raw conversation that drives progress.
             </p>
 
             <div className="pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-left">
-                <span className="text-xs font-mono tracking-[0.2em] text-amber-600 uppercase block font-bold">
+                <span className="text-xs font-mono tracking-[0.2em] text-amber-600 uppercase block font-light">
                   THE FORUM HOUSE
                 </span>
                 <span className="text-sm font-serif italic text-gray-900">

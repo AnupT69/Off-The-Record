@@ -63,8 +63,8 @@ export default function RevealSection() {
               <Sparkles className="w-3.5 h-3.5 text-amber-600" />
               <span>INTERACTIVE REVEAL EXPERIMENT</span>
             </div>
-            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-gray-900">
-              THINGS WE DON&apos;T SAY OUT LOUD.
+            <h2 className="font-editorial-heading text-3xl sm:text-4xl font-light uppercase tracking-tight text-gray-900">
+              THINGS WE DON&apos;T SAY.
             </h2>
           </div>
           <p className="text-sm md:text-base text-gray-600 font-light max-w-md mt-4 md:mt-0 leading-relaxed flex items-center gap-2">
@@ -81,10 +81,10 @@ export default function RevealSection() {
                 key={item.id}
                 whileHover={{ y: -4 }}
                 onClick={() => toggleReveal(item.id)}
-                className="group relative bg-gray-50 border border-gray-200 hover:border-[#D8B45A]/70 rounded-sm p-8 cursor-pointer flex flex-col justify-between transition-all duration-300 min-h-[280px] shadow-xl overflow-hidden"
+                className="group relative bg-gray-50 border border-gray-200 hover:border-amber-600/70 rounded-sm p-8 cursor-pointer flex flex-col justify-between transition-all duration-300 min-h-[280px] shadow-xl overflow-hidden"
               >
                 <div className="flex items-center justify-between text-xs font-mono text-gray-600 mb-6">
-                  <span className="text-amber-600 font-semibold">{item.role} CONFESSION</span>
+                  <span className="text-amber-600 font-medium">{item.role} CONFESSION</span>
                   <span className="flex items-center gap-1.5 text-[11px]">
                     {isRevealed ? (
                       <>
@@ -99,7 +99,7 @@ export default function RevealSection() {
                 </div>
 
                 <div className="my-auto">
-                  <p className="font-serif-quote text-2xl text-gray-900 leading-snug font-normal">
+                  <p className="font-serif-quote text-xl text-gray-900 leading-snug font-light">
                     &ldquo;{item.setup}&rdquo;
                   </p>
 
@@ -109,7 +109,7 @@ export default function RevealSection() {
                         isRevealed ? "opacity-0 blur-sm absolute inset-0" : "opacity-100"
                       }`}
                     >
-                      <span className="inline-block bg-[#262626]/80 text-transparent select-none rounded px-3 py-1 text-sm font-mono tracking-widest border border-gray-200">
+                      <span className="inline-block bg-gray-200/80 text-transparent select-none rounded px-3 py-1 text-sm font-mono tracking-widest border border-gray-200">
                         ██████ ████████ ████████ ████████
                       </span>
                     </div>
@@ -119,7 +119,7 @@ export default function RevealSection() {
                         isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none absolute inset-0"
                       }`}
                     >
-                      <p className="font-serif-quote text-2xl text-amber-600 italic font-semibold leading-snug">
+                      <p className="font-serif-quote text-xl text-amber-600 italic font-normal leading-snug">
                         {item.secret}
                       </p>
                     </div>

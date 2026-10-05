@@ -59,7 +59,7 @@ export default function ConfessionWall({
               <Lock className="w-3.5 h-3.5" />
               <span>THE LIVE BOARDROOM WALL</span>
             </div>
-            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-gray-900">
+            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-medium uppercase tracking-tight text-gray-900">
               WHAT THE ROOM IS REALLY THINKING.
             </h2>
             <p className="text-sm md:text-base text-gray-600 font-light max-w-xl mt-3 leading-relaxed">
@@ -78,7 +78,7 @@ export default function ConfessionWall({
             </button>
             <button
               onClick={onOpenConfessModal}
-              className="px-6 py-3 bg-gray-900 text-white font-bold text-xs uppercase tracking-widest rounded-sm hover:bg-amber-600 transition-colors shadow-lg"
+              className="px-6 py-3 bg-gray-900 text-white font-light text-xs uppercase tracking-widest rounded-sm hover:bg-amber-600 transition-colors shadow-lg"
             >
               + ADD YOUR CONFESSION
             </button>
@@ -95,8 +95,8 @@ export default function ConfessionWall({
               onClick={() => setSelectedRole(r)}
               className={`px-4 py-2 rounded-sm text-xs font-mono tracking-wider transition-all whitespace-nowrap ${
                 selectedRole === r
-                  ? "bg-amber-600 text-white font-bold shadow-md"
-                  : "bg-gray-50 border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-[#D8B45A]/40"
+                  ? "bg-amber-600 text-white font-light shadow-md"
+                  : "bg-gray-50 border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-amber-600/40"
               }`}
             >
               {r}
@@ -115,21 +115,21 @@ export default function ConfessionWall({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.4, delay: index * 0.04 }}
-                  className="bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-[#D8B45A]/60 transition-all duration-300 relative group shadow-xl"
+                  className="bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/60 transition-all duration-300 relative group shadow-xl"
                 >
                   <div className="text-4xl font-serif text-amber-600/30 mb-4 select-none">
                     &ldquo;
                   </div>
 
                   <div className="mb-8">
-                    <p className="font-serif-quote text-2xl text-gray-900 leading-relaxed font-normal italic">
+                    <p className="font-serif-quote text-2xl text-gray-900 leading-relaxed font-light italic">
                       &ldquo;{item.confession}&rdquo;
                     </p>
                   </div>
 
                   <div className="pt-6 border-t border-gray-200/60 flex items-center justify-between">
                     <div>
-                      <span className="text-xs font-mono text-amber-600 uppercase tracking-wider block font-semibold">
+                      <span className="text-xs font-mono text-amber-600 uppercase tracking-wider block font-medium">
                         — Anonymous
                         {item.role && item.role !== "Other" ? `, ${item.role}` : ""}
                       </span>
@@ -144,9 +144,9 @@ export default function ConfessionWall({
 
                     <button
                       onClick={() => toggleLike(item.id)}
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-white border border-gray-200 text-xs font-mono text-gray-600 hover:text-amber-600 hover:border-[#D8B45A]/40 transition-all active:scale-95"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-white border border-gray-200 text-xs font-mono text-gray-600 hover:text-amber-600 hover:border-amber-600/40 transition-all active:scale-95"
                     >
-                      <Heart className="w-3.5 h-3.5 text-amber-600 fill-[#D8B45A]/20" />
+                      <Heart className="w-3.5 h-3.5 text-amber-600 fill-amber-600/20" />
                       <span>{likedMap[item.id] || 0}</span>
                     </button>
                   </div>
@@ -157,7 +157,7 @@ export default function ConfessionWall({
         ) : (
           <div className="py-20 text-center border border-dashed border-gray-200 rounded-sm bg-gray-50/40">
             <MessageSquare className="w-10 h-10 text-amber-600 mx-auto mb-4 opacity-50" />
-            <h3 className="font-editorial-heading text-2xl text-gray-900 uppercase font-bold">
+            <h3 className="font-editorial-heading text-2xl text-gray-900 uppercase font-light">
               NO CONFESSIONS IN THIS CATEGORY YET
             </h3>
             <p className="text-sm font-mono text-gray-600 mt-2 mb-6">
@@ -165,7 +165,7 @@ export default function ConfessionWall({
             </p>
             <button
               onClick={onOpenConfessModal}
-              className="px-6 py-3 bg-amber-600 text-white font-bold text-xs uppercase tracking-widest rounded-sm"
+              className="px-6 py-3 bg-amber-600 text-white font-light text-xs uppercase tracking-widest rounded-sm"
             >
               BE THE FIRST TO CONFESS →
             </button>

@@ -17,12 +17,12 @@ export default function SummitCTA() {
                 <span>OFFICIAL SUMMIT & AWARDS 2026</span>
               </div>
 
-              <h2 className="font-editorial-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-gray-900 leading-none">
+              <h2 className="font-editorial-heading text-4xl sm:text-5xl lg:text-6xl font-medium uppercase tracking-tight text-gray-900 leading-none">
                 THE CONVERSATION <br />
                 CONTINUES IN HYDERABAD.
               </h2>
 
-              <p className="font-serif-quote text-2xl text-amber-600 italic font-normal">
+              <p className="font-serif-quote text-2xl text-amber-600 italic font-light">
                 &ldquo;Bring the questions you submitted here into the room.&rdquo;
               </p>
 
@@ -51,7 +51,7 @@ export default function SummitCTA() {
                 href="https://www.theforumhouse.in/conferences/the-house-of-cfo-x-cto-hyderabad-2026"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 rounded-sm bg-amber-600 text-white font-bold text-xs uppercase tracking-[0.15em] hover:bg-gray-900 transition-all duration-300 flex items-center justify-center gap-3 group text-center shadow-xl"
+                className="px-8 py-4 rounded-sm bg-amber-600 text-white font-light text-xs uppercase tracking-[0.15em] hover:bg-gray-900 transition-all duration-300 flex items-center justify-center gap-3 group text-center shadow-xl"
               >
                 <span>EXPLORE THE SUMMIT</span>
                 <ExternalLink className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" />
@@ -61,7 +61,7 @@ export default function SummitCTA() {
                 href="https://www.theforumhouse.in/conferences/the-house-of-cfo-x-cto-hyderabad-2026"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 rounded-sm bg-gray-50 border border-gray-200 text-gray-900 font-bold text-xs uppercase tracking-[0.15em] hover:border-[#D8B45A] hover:text-amber-600 transition-all duration-300 flex items-center justify-center gap-3 text-center"
+                className="px-8 py-4 rounded-sm bg-gray-50 border border-gray-200 text-gray-900 font-light text-xs uppercase tracking-[0.15em] hover:border-amber-600 hover:text-amber-600 transition-all duration-300 flex items-center justify-center gap-3 text-center"
               >
                 <span>REGISTER FOR THE SUMMIT</span>
                 <ArrowRight className="w-4 h-4" />

@@ -50,13 +50,13 @@ export default function CFOvsCTO() {
               <Scale className="w-3.5 h-3.5" />
               <span>THE C-SUITE DIALECTIC</span>
             </div>
-            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-gray-900">
+            <h2 className="font-editorial-heading text-3xl sm:text-4xl font-light uppercase tracking-tight text-gray-900">
               SAME BOARDROOM. <br className="hidden sm:block" />
               DIFFERENT REALITIES.
             </h2>
           </div>
           <p className="text-sm md:text-base text-gray-600 font-light max-w-md mt-4 md:mt-0 leading-relaxed">
-            Two distinct lenses. One balance sheet. Select a boardroom debate scenario below.
+            Select a boardroom debate scenario below.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export default function CFOvsCTO() {
               onClick={() => setActiveIndex(idx)}
               className={`px-5 py-2.5 rounded-sm text-xs font-mono tracking-wider transition-all whitespace-nowrap flex items-center gap-2 ${
                 activeIndex === idx
-                  ? "bg-amber-600 text-white font-bold shadow-lg"
+                  ? "bg-amber-600 text-white font-light shadow-lg"
                   : "bg-gray-50 border border-gray-200 text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -78,7 +78,7 @@ export default function CFOvsCTO() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
-          <div className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-[#D8B45A] text-amber-600 font-mono font-bold text-xs items-center justify-center shadow-2xl">
+          <div className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white border border-amber-600 text-amber-600 font-mono font-light text-xs items-center justify-center shadow-2xl">
             VS
           </div>
 
@@ -87,11 +87,11 @@ export default function CFOvsCTO() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-50 border border-gray-200 rounded-sm p-8 sm:p-12 flex flex-col justify-between hover:border-[#D8B45A]/40 transition-colors gold-glow relative"
+            className="bg-gray-50 border border-gray-200 rounded-sm p-8 sm:p-12 flex flex-col justify-between hover:border-amber-600/40 transition-colors gold-glow relative"
           >
             <div>
               <div className="flex items-center justify-between pb-6 border-b border-gray-200 mb-8">
-                <span className="text-xs font-mono uppercase tracking-[0.25em] text-amber-600 font-bold">
+                <span className="text-xs font-mono uppercase tracking-[0.25em] text-amber-600 font-light">
                   THE CHIEF FINANCIAL OFFICER
                 </span>
                 <span className="text-xs font-mono text-gray-600">CAPEX / OPEX LENS</span>
@@ -101,7 +101,7 @@ export default function CFOvsCTO() {
                 WHAT THE CFO SAYS:
               </div>
 
-              <p className="font-serif-quote text-3xl sm:text-4xl text-gray-900 leading-snug font-normal italic">
+              <p className="font-serif-quote text-2xl sm:text-3xl text-gray-900 leading-snug font-light italic">
                 &ldquo;{activePair.cfo}&rdquo;
               </p>
             </div>
@@ -117,11 +117,11 @@ export default function CFOvsCTO() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-50 border border-gray-200 rounded-sm p-8 sm:p-12 flex flex-col justify-between hover:border-[#D8B45A]/40 transition-colors gold-glow relative"
+            className="bg-gray-50 border border-gray-200 rounded-sm p-8 sm:p-12 flex flex-col justify-between hover:border-amber-600/40 transition-colors gold-glow relative"
           >
             <div>
               <div className="flex items-center justify-between pb-6 border-b border-gray-200 mb-8">
-                <span className="text-xs font-mono uppercase tracking-[0.25em] text-amber-600 font-bold">
+                <span className="text-xs font-mono uppercase tracking-[0.25em] text-amber-600 font-light">
                   THE CHIEF TECHNOLOGY OFFICER
                 </span>
                 <span className="text-xs font-mono text-gray-600">ARCHITECTURE & SPEED LENS</span>
@@ -131,7 +131,7 @@ export default function CFOvsCTO() {
                 WHAT THE CTO SAYS:
               </div>
 
-              <p className="font-serif-quote text-3xl sm:text-4xl text-amber-600 leading-snug font-normal italic">
+              <p className="font-serif-quote text-2xl sm:text-3xl text-amber-600 leading-snug font-light italic">
                 &ldquo;{activePair.cto}&rdquo;
               </p>
             </div>
@@ -146,7 +146,7 @@ export default function CFOvsCTO() {
         <div className="mt-12 flex items-center justify-center gap-4">
           <button
             onClick={() => setActiveIndex((prev) => (prev > 0 ? prev - 1 : COMPARISONS.length - 1))}
-            className="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-900 hover:border-[#D8B45A] font-mono text-xs uppercase tracking-wider rounded-sm transition-colors"
+            className="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-900 hover:border-amber-600 font-mono text-xs uppercase tracking-wider rounded-sm transition-colors"
           >
             ← PREVIOUS DEBATE
           </button>
@@ -155,7 +155,7 @@ export default function CFOvsCTO() {
           </span>
           <button
             onClick={() => setActiveIndex((prev) => (prev < COMPARISONS.length - 1 ? prev + 1 : 0))}
-            className="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-900 hover:border-[#D8B45A] font-mono text-xs uppercase tracking-wider rounded-sm transition-colors flex items-center gap-1"
+            className="px-5 py-2.5 bg-gray-50 border border-gray-200 text-gray-900 hover:border-amber-600 font-mono text-xs uppercase tracking-wider rounded-sm transition-colors flex items-center gap-1"
           >
             NEXT DEBATE →
           </button>

@@ -50,13 +50,12 @@ export default function Questions({ onOpenConfessModalWithQuestion }: QuestionsP
               <HelpCircle className="w-3.5 h-3.5" />
               <span>THE EXECUTIVE INQUIRY</span>
             </div>
-            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-black uppercase tracking-tight text-gray-900">
-              QUESTIONS WE DON&apos;T ASK <br className="hidden sm:block" />
-              IN THE BOARDROOM.
+            <h2 className="font-editorial-heading text-3xl sm:text-4xl font-light uppercase tracking-tight text-gray-900">
+              QUESTIONS WE DON&apos;T ASK.
             </h2>
           </div>
           <p className="text-sm md:text-base text-gray-600 font-light max-w-md mt-4 md:mt-0 leading-relaxed">
-            The hard queries every senior executive thinks about, but rarely puts on the official slide deck.
+            The hard queries we think about, but rarely put on the slide deck.
           </p>
         </div>
 
@@ -69,17 +68,17 @@ export default function Questions({ onOpenConfessModalWithQuestion }: QuestionsP
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
               onClick={() => onOpenConfessModalWithQuestion(`In response to: "${q.question}"`)}
-              className="group bg-gray-50 border border-gray-200 hover:border-[#D8B45A]/70 rounded-sm p-8 md:p-10 transition-all duration-300 cursor-pointer flex flex-col md:flex-row items-start md:items-center justify-between gap-6 gold-border-glow"
+              className="group bg-gray-50 border border-gray-200 hover:border-amber-600/70 rounded-sm p-8 md:p-10 transition-all duration-300 cursor-pointer flex flex-col md:flex-row items-start md:items-center justify-between gap-6 gold-border-glow"
             >
               <div className="flex items-start gap-6">
-                <span className="font-mono font-bold text-2xl text-amber-600 pt-1">
+                <span className="font-mono font-light text-2xl text-amber-600 pt-1">
                   {q.num}
                 </span>
                 <div>
                   <span className="text-[10px] font-mono text-gray-600 uppercase tracking-widest block mb-2">
                     {q.category}
                   </span>
-                  <h3 className="font-editorial-heading text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 group-hover:text-amber-600 transition-colors leading-tight uppercase">
+                  <h3 className="font-editorial-heading text-xl sm:text-2xl font-light text-gray-900 group-hover:text-amber-600 transition-colors leading-tight uppercase">
                     {q.question}
                   </h3>
                 </div>

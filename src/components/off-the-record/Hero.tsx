@@ -31,11 +31,11 @@ export default function Hero({ onOpenConfessModal, onExplorePrompts }: HeroProps
       <div className="max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between items-start md:items-center text-xs uppercase tracking-[0.2em] font-mono text-gray-600 border-b border-gray-200/60 pb-4 z-10 gap-2">
         <div className="flex items-center space-x-2">
           <span className="text-amber-600">THE FORUM HOUSE</span>
-          <span className="text-[#262626]">/</span>
+          <span className="text-gray-200">/</span>
           <span>PRESENTS</span>
         </div>
         <div className="flex items-center space-x-3 text-right">
-          <span className="text-gray-900 font-medium">THE HOUSE OF CFO × CTO</span>
+          <span className="text-gray-900 font-light">THE HOUSE OF CFO × CTO</span>
           <span className="w-1.5 h-1.5 rounded-full bg-amber-600" />
           <span className="text-amber-600">20 NOV 2026 · HYDERABAD</span>
         </div>
@@ -45,21 +45,13 @@ export default function Hero({ onOpenConfessModal, onExplorePrompts }: HeroProps
         style={{ opacity, scale, y }}
         className="max-w-6xl w-full mx-auto my-auto text-center z-10 flex flex-col items-center justify-center py-12"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-amber-600 text-xs font-mono tracking-[0.25em] uppercase mb-8 shadow-inner"
-        >
-          <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-          <span>AN ANONYMOUS C-SUITE CONFESSION CAMPAIGN</span>
-        </motion.div>
+
 
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="font-editorial-heading font-black tracking-tighter text-6xl sm:text-8xl md:text-9xl lg:text-[11.5rem] leading-[0.85] text-transparent bg-clip-text bg-gradient-to-b from-gray-900 via-gray-800 to-gray-500 uppercase text-center my-2 drop-shadow-2xl"
+          className="font-editorial-heading font-light tracking-tighter text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.85] text-transparent bg-clip-text bg-gradient-to-b from-gray-900 via-gray-800 to-gray-500 uppercase text-center my-2 drop-shadow-xl"
         >
           OFF <br className="hidden sm:block" />
           THE <br className="hidden sm:block" />
@@ -70,18 +62,18 @@ export default function Hero({ onOpenConfessModal, onExplorePrompts }: HeroProps
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35 }}
-          className="mt-6 flex items-center justify-center gap-3 text-sm md:text-xl font-mono uppercase tracking-[0.3em] text-amber-600"
+          className="mt-6 flex items-center justify-center gap-3 text-xs md:text-sm font-mono uppercase tracking-[0.3em] text-amber-600 font-light"
         >
-          <span className="h-[1px] w-8 md:w-16 bg-amber-600/50" />
+          <span className="h-[1px] w-6 md:w-12 bg-amber-600/50" />
           <span>CFO × CTO CONFESSIONS</span>
-          <span className="h-[1px] w-8 md:w-16 bg-amber-600/50" />
+          <span className="h-[1px] w-6 md:w-12 bg-amber-600/50" />
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45 }}
-          className="font-serif-quote italic text-2xl md:text-4xl text-gray-900 mt-8 max-w-3xl leading-snug font-normal"
+          className="font-serif-quote italic text-xl md:text-3xl text-gray-900 mt-8 max-w-2xl leading-snug font-light"
         >
           &ldquo;What would you say if nobody knew it was you?&rdquo;
         </motion.p>
@@ -90,11 +82,9 @@ export default function Hero({ onOpenConfessModal, onExplorePrompts }: HeroProps
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.55 }}
-          className="text-sm md:text-base text-gray-600 mt-4 max-w-2xl font-light tracking-wide leading-relaxed"
+          className="text-xs md:text-sm text-gray-600 mt-3 max-w-xl font-light tracking-wide leading-relaxed"
         >
-          No names. No titles. No boardroom politics.
-          <br className="hidden sm:inline" />
-          Just the things you really want to say.
+          No names. No titles. Just what you want to say.
         </motion.p>
 
         <motion.div
@@ -105,7 +95,7 @@ export default function Hero({ onOpenConfessModal, onExplorePrompts }: HeroProps
         >
           <button
             onClick={onOpenConfessModal}
-            className="w-full sm:w-auto px-9 py-4 rounded-sm bg-gray-900 text-white font-bold text-sm tracking-[0.15em] uppercase hover:bg-amber-600 transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl flex items-center justify-center gap-3 group gold-glow"
+            className="w-full sm:w-auto px-9 py-4 rounded-sm bg-gray-900 text-white font-light text-sm tracking-[0.15em] uppercase hover:bg-amber-600 transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl flex items-center justify-center gap-3 group gold-glow"
           >
             <span>CONFESS ANONYMOUSLY</span>
             <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
@@ -113,21 +103,13 @@ export default function Hero({ onOpenConfessModal, onExplorePrompts }: HeroProps
 
           <button
             onClick={onExplorePrompts}
-            className="w-full sm:w-auto px-7 py-4 rounded-sm bg-gray-50 border border-gray-200 text-gray-900 font-medium text-xs tracking-[0.15em] uppercase hover:border-[#D8B45A]/60 hover:text-amber-600 transition-all duration-300"
+            className="w-full sm:w-auto px-7 py-4 rounded-sm bg-gray-50 border border-gray-200 text-gray-900 font-light text-xs tracking-[0.15em] uppercase hover:border-amber-600/60 hover:text-amber-600 transition-all duration-300"
           >
             SEE PROMPTS ↓
           </button>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="mt-6 flex items-center gap-2 text-xs font-mono text-gray-600"
-        >
-          <Lock className="w-3.5 h-3.5 text-amber-600" />
-          <span>100% Anonymous · No names required · Zero tracking</span>
-        </motion.div>
+
       </motion.div>
 
       <div className="max-w-7xl w-full mx-auto flex flex-col sm:flex-row justify-between items-center text-[11px] font-mono uppercase tracking-widest text-gray-600 border-t border-gray-200/60 pt-4 z-10 gap-3">
@@ -148,7 +130,7 @@ export default function Hero({ onOpenConfessModal, onExplorePrompts }: HeroProps
             href="https://www.theforumhouse.in/conferences/the-house-of-cfo-x-cto-hyderabad-2026"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-amber-600 underline underline-offset-4 decoration-[#262626]"
+            className="hover:text-amber-600 underline underline-offset-4 decoration-gray-200"
           >
             SUMMIT DETAILS ↗
           </a>

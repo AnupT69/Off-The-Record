@@ -28,7 +28,7 @@ export default function FinalCTA({ onOpenConfessModal }: FinalCTAProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="font-editorial-heading font-black tracking-tighter text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase leading-[0.88] text-gray-900 mb-12"
+          className="font-editorial-heading font-medium tracking-tighter text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase leading-[0.88] text-gray-900 mb-12"
         >
           WHAT WOULD <br />
           YOU SAY <br />
