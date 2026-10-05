@@ -247,35 +247,47 @@ export default function ConfessionFormModal({
               </div>
 
               <h2 className="font-editorial-heading text-4xl sm:text-5xl font-medium uppercase text-gray-900 tracking-tight mb-3">
-                IT&apos;S OFF THE RECORD.
+                YOUR VOICE IS HEARD.
               </h2>
 
               <p className="font-serif-quote italic text-xl text-gray-900 mb-4">
-                &ldquo;Your confession has entered the House.&rdquo;
+                &ldquo;Now hear the rest of the boardroom live.&rdquo;
               </p>
 
               <p className="text-sm text-gray-600 max-w-md font-light leading-relaxed mb-8">
-                Thank you for saying what usually stays unsaid. Your thought will be displayed anonymously on the wall.
+                Join us in Hyderabad on November 20th for <strong>THE HOUSE OF CFO × CTO</strong>. Secure your seat to debate capital allocation, AI investments, and strategic decision-making in an unfiltered environment.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                <button
-                  onClick={onClose}
-                  className="px-8 py-3.5 rounded-sm bg-gray-900 text-white font-light text-xs uppercase tracking-widest hover:bg-amber-600 transition-colors"
+              <div className="flex flex-col gap-3 w-full sm:w-auto max-w-sm mx-auto">
+                <a
+                  href="https://www.theforumhouse.in/conferences/the-house-of-cfo-x-cto-hyderabad-2026/registration"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 rounded-sm bg-amber-600 text-white font-light text-xs uppercase tracking-widest hover:bg-gray-900 transition-colors shadow-lg flex items-center justify-center gap-2 group"
                 >
-                  RETURN TO SITE →
-                </button>
-                <button
-                  onClick={() => {
-                    setIsSubmitted(false);
-                    setConfession("");
-                    setRole("");
-                    setSelectedPrompt("");
-                  }}
-                  className="px-6 py-3.5 rounded-sm bg-white border border-gray-200 text-gray-600 hover:text-gray-900 font-mono text-xs uppercase tracking-widest transition-colors"
-                >
-                  ADD ANOTHER CONFESSION
-                </button>
+                  <span>REGISTER FOR THE SUMMIT</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+                
+                <div className="flex flex-col sm:flex-row gap-3 w-full">
+                  <button
+                    onClick={onClose}
+                    className="flex-1 px-6 py-3.5 rounded-sm bg-gray-900 text-white font-light text-xs uppercase tracking-widest hover:bg-gray-800 transition-colors"
+                  >
+                    RETURN TO SITE
+                  </button>
+                  <button
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setConfession("");
+                      setRole("");
+                      setSelectedPrompt("");
+                    }}
+                    className="flex-1 px-6 py-3.5 rounded-sm bg-white border border-gray-200 text-gray-600 hover:text-gray-900 font-mono text-xs uppercase tracking-widest transition-colors"
+                  >
+                    CONFESS AGAIN
+                  </button>
+                </div>
               </div>
             </motion.div>
           )}
