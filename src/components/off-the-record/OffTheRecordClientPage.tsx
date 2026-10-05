@@ -5,8 +5,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import PromptCards from "./PromptCards";
 import ConfessionWall from "./ConfessionWall";
-import RevealSection from "./RevealSection";
-import CFOvsCTO from "./CFOvsCTO";
+
 import Questions from "./Questions";
 import WhyThisExists from "./WhyThisExists";
 import SummitCTA from "./SummitCTA";
@@ -73,11 +72,9 @@ export default function OffTheRecordClientPage() {
           onOpenConfessModal={() => handleOpenModal()}
         />
 
+
+
         <PromptCards onSelectPrompt={handleSelectPrompt} />
-
-        <RevealSection />
-
-        <CFOvsCTO />
 
         <Questions
           onOpenConfessModalWithQuestion={(qText) => handleOpenModal(qText)}

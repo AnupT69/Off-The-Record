@@ -105,24 +105,25 @@ export default function ConfessionWall({
         </div>
 
         {filteredConfessions.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence mode="popLayout">
-              {filteredConfessions.map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.4, delay: index * 0.04 }}
-                  className="bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/60 transition-all duration-300 relative group shadow-xl"
+          <div className="overflow-hidden relative w-full py-4 group pause-on-hover">
+            {/* Fade edges */}
+            <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            
+            <div
+              className="flex gap-6 w-max animate-marquee-rtl"
+            >
+              {[...filteredConfessions, ...filteredConfessions, ...filteredConfessions, ...filteredConfessions].map((item, index) => (
+                <div
+                  key={`${item.id}-${index}`}
+                  className="w-[300px] md:w-[400px] shrink-0 bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/60 transition-all duration-300 relative shadow-xl whitespace-normal"
                 >
                   <div className="text-4xl font-serif text-amber-600/30 mb-4 select-none">
                     &ldquo;
                   </div>
 
                   <div className="mb-8">
-                    <p className="font-serif-quote text-2xl text-gray-900 leading-relaxed font-light italic">
+                    <p className="font-serif-quote text-xl text-gray-900 leading-relaxed font-light italic">
                       &ldquo;{item.confession}&rdquo;
                     </p>
                   </div>
@@ -137,7 +138,7 @@ export default function ConfessionWall({
                         {new Date(item.createdAt).toLocaleDateString("en-US", {
                           month: "short",
                           day: "numeric",
-                        })}{" "}
+                        })}
                         · Verified C-Suite
                       </span>
                     </div>
@@ -150,9 +151,9 @@ export default function ConfessionWall({
                       <span>{likedMap[item.id] || 0}</span>
                     </button>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </AnimatePresence>
+            </div>
           </div>
         ) : (
           <div className="py-20 text-center border border-dashed border-gray-200 rounded-sm bg-gray-50/40">

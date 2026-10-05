@@ -74,12 +74,7 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
             >
               The Confessions
             </button>
-            <button
-              onClick={() => scrollToSection("cfo-vs-cto")}
-              className="hover:text-gray-900 transition-colors duration-200"
-            >
-              CFO × CTO
-            </button>
+
             <button
               onClick={() => scrollToSection("questions")}
               className="hover:text-gray-900 transition-colors duration-200"
@@ -141,12 +136,7 @@ export default function Navbar({ onOpenConfessModal }: NavbarProps) {
               >
                 The Confessions
               </button>
-              <button
-                onClick={() => scrollToSection("cfo-vs-cto")}
-                className="text-left py-2 border-b border-gray-200/50 hover:text-gray-900"
-              >
-                CFO × CTO Perspectives
-              </button>
+
               <button
                 onClick={() => scrollToSection("questions")}
                 className="text-left py-2 border-b border-gray-200/50 hover:text-gray-900"

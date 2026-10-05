@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { MessageSquarePlus, ArrowUpRight } from "lucide-react";
 
 interface PromptCardsProps {
@@ -80,7 +79,7 @@ export default function PromptCards({ onSelectPrompt }: PromptCardsProps) {
               <span className="w-1.5 h-1.5 rounded-full bg-amber-600" />
               <span>CONFESSION STARTERS</span>
             </div>
-            <h2 className="font-editorial-heading text-4xl sm:text-6xl font-medium uppercase tracking-tight text-gray-900">
+            <h2 className="font-editorial-heading text-3xl sm:text-4xl font-light uppercase tracking-tight text-gray-900">
               WE&apos;LL START.
             </h2>
           </div>
@@ -89,39 +88,40 @@ export default function PromptCards({ onSelectPrompt }: PromptCardsProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PROMPTS.map((prompt, index) => (
-            <motion.div
-              key={prompt.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              onClick={() => onSelectPrompt(prompt.text)}
-              className="group relative bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/70 transition-all duration-300 cursor-pointer overflow-hidden gold-border-glow"
-            >
-              <div className="flex items-center justify-between text-xs font-mono text-gray-600 mb-8">
-                <span className="text-amber-600 font-light">{prompt.num}</span>
-                <span className="px-2 py-0.5 rounded bg-white border border-gray-200 text-[10px] uppercase tracking-wider text-gray-600 group-hover:text-amber-600 transition-colors">
-                  {prompt.tag}
-                </span>
-              </div>
+        <div className="overflow-hidden relative w-full py-4 group pause-on-hover">
+          <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          
+          <div className="flex gap-6 w-max animate-marquee-ltr">
+            {[...PROMPTS, ...PROMPTS, ...PROMPTS, ...PROMPTS].map((prompt, index) => (
+              <div
+                key={`${prompt.id}-${index}`}
+                onClick={() => onSelectPrompt(prompt.text)}
+                className="w-[300px] md:w-[400px] shrink-0 bg-gray-50 border border-gray-200 rounded-sm p-8 flex flex-col justify-between hover:border-amber-600/70 transition-all duration-300 cursor-pointer relative shadow-xl whitespace-normal"
+              >
+                <div className="flex items-center justify-between text-xs font-mono text-gray-600 mb-8">
+                  <span className="text-amber-600 font-light">{prompt.num}</span>
+                  <span className="px-2 py-0.5 rounded bg-white border border-gray-200 text-[10px] uppercase tracking-wider text-gray-600 group-hover:text-amber-600 transition-colors">
+                    {prompt.tag}
+                  </span>
+                </div>
 
-              <div className="my-auto">
-                <p className="font-serif-quote text-2xl md:text-2xl text-gray-900 group-hover:text-amber-600 transition-colors duration-300 leading-snug italic font-light">
-                  &ldquo;{prompt.text}&rdquo;
-                </p>
-              </div>
+                <div className="my-auto">
+                  <p className="font-serif-quote text-xl md:text-xl text-gray-900 group-hover:text-amber-600 transition-colors duration-300 leading-snug italic font-light">
+                    &ldquo;{prompt.text}&rdquo;
+                  </p>
+                </div>
 
-              <div className="mt-8 pt-4 border-t border-gray-200/50 flex items-center justify-between text-xs font-mono text-gray-600 group-hover:text-gray-900">
-                <span className="flex items-center gap-2 group-hover:translate-x-1 transition-transform">
-                  <MessageSquarePlus className="w-3.5 h-3.5 text-amber-600" />
-                  COMPLETE THIS PROMPT
-                </span>
-                <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="mt-8 pt-4 border-t border-gray-200/50 flex items-center justify-between text-xs font-mono text-gray-600 group-hover:text-gray-900">
+                  <span className="flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                    <MessageSquarePlus className="w-3.5 h-3.5 text-amber-600" />
+                    COMPLETE THIS PROMPT
+                  </span>
+                  <ArrowUpRight className="w-4 h-4 text-amber-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
               </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
